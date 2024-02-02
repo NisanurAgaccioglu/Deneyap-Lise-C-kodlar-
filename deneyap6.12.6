@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+class Meyve
+{
+protected:
+    string renk;
+    string tat;
+};
+
+class Elma:public Meyve
+{
+public:
+    Elma()
+    {
+        cout<<"Ben bir elmayim."<<endl;
+    }
+
+    Elma(string meyveRengi)
+    {
+        this->renk = meyveRengi;
+        cout<<"Ben bir "<<renk<<" elmayim"<<endl;
+    }
+};
+
+class Armut:public Meyve
+{
+public:
+    Armut()
+    {
+        cout<<"Ben bir armutum."<<endl;
+    }
+
+    Armut(string tat)
+    {
+        this->tat = tat;
+        cout<<"Armut "<<tat<<"'dir."<<endl;
+    }
+};
+
+int main()
+{
+    Elma elma1;
+    Elma elma2("Kirmizi");
+
+    Armut armut1;
+    Armut armut2("Tatli");
+}
