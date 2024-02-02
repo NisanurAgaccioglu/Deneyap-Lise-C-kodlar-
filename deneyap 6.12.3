@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+class Hayvan
+{
+public:
+    int bacak_sayisi;
+    float agirlik;
+    void sesCikar();
+};
+
+class Kedi:public Hayvan
+{
+    public:
+    int ziplamaMesafesi;
+
+    void sesCikar()
+    {
+        cout<<"Miav"<<endl;
+    }
+};
+
+class Tavuk:public Hayvan
+{
+public:
+    int yumurtlamaSayisi;
+
+    void sesCikar()
+    {
+        cout<<"Git git gidak"<<endl;
+    }
+};
+
+
+int main()
+{
+    Kedi sarman;
+    sarman.bacak_sayisi = 4;
+    sarman.agirlik = 2.2;
+    sarman.ziplamaMesafesi = 2.5;
+    sarman.sesCikar();
+
+    Tavuk tavuk1;
+    tavuk1.bacak_sayisi = 2;
+    tavuk1.agirlik = 1.5;
+    tavuk1.yumurtlamaSayisi = 2;
+    tavuk1.sesCikar();
+
+    return 0;
+}
