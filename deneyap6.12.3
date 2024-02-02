@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class Araba
+{
+public:
+    string marka;
+    string model;
+    int yil;
+    int fiyat;
+    Araba(string marka,string model,int yil,int fiyat)
+    {
+        this->marka = marka;
+        this->model = model;
+        this->yil = yil;
+        this->fiyat = fiyat;
+    }
+};
+
+int main()
+{
+    Araba araba1("Suzuki","Vitara",2016,225000);
+    Araba araba2("Volkswagen","T-Roc",2020,360000);
+
+    cout<<araba1.marka<<" "<<araba1.model<<" "<<araba1.yil<<" "<<araba1.fiyat<<"\n";
+    cout<<araba2.marka<<" "<<araba2.model<<" "<<araba2.yil<<" "<<araba2.fiyat<<"\n";
+
+    return 0;
+}
