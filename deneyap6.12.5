@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+class Cokgen
+{
+protected:
+    int genislik,yukseklik;
+
+public:
+    void degerAta(int g, int y)
+    {
+        genislik = g;
+        yukseklik = y;
+    }
+};
+
+class Dikdortgen:public Cokgen
+{
+public:
+    int alan()
+    {
+        return (genislik * yukseklik);
+    }
+};
+
+class Ucgen:public Cokgen
+{
+public:
+    int alan()
+    {
+        return (genislik * yukseklik) / 2;
+    }
+};
+
+
+int main()
+{
+    Dikdortgen dik;
+    Ucgen ucgen;
+    dik.degerAta(4,5);
+    ucgen.degerAta(4,5);
+
+
+    cout<<"Dikdortgen Alani: "<<dik.alan()<<endl;
+    cout<<"Ucgenin Alani: "<<ucgen.alan()<<endl;
+    return 0;
+}
