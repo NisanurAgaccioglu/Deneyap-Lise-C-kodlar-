@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int en_buyuk(int dizi[5])
+{
+int enbuyuk = dizi[0];
+
+for(int i=1;i<5;i++)
+{
+if(enbuyuk<dizi[i])
+enbuyuk=dizi[i];
+}
+return enbuyuk;
+}
+
+int main()
+{
+    int dizi1[] = {5,4,8,9,2};
+    int dizi2[] = {88,55,6,4,10};
+
+    int toplam;
+    toplam = en_buyuk(dizi1) + en_buyuk(dizi2);
+    cout<<"Toplam : "<<toplam;
+    return 0;
+}
